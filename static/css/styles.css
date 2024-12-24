@@ -1,1 +1,154 @@
+body {
+    background-color: #1e1e1e; /* Dark mode background */
+    color: #ffffff; /* White text */
+}
 
+.form-container {
+    width: 60%;
+    margin-top: 10%;
+    padding: 20px;
+    background-color: rgba(58, 46, 46, 0.312);
+    border-radius: 10px;
+}
+
+.card {
+    background-color: #ffffff; /* Slightly lighter dark background for cards */
+    border: none; /* Remove borders for a cleaner look */
+}
+
+.card-header {
+    background-color: #007acc; /* VS Code blue header color */
+    color: #ffffff; /* White text in header */
+}
+
+.list-group-item {
+    background-color: #252526; /* Match card background */
+    color: #ffffff; /* White text */
+}
+
+.list-group-item a {
+    color: #d4d4d4; /* Light grey for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.list-group-item a:hover {
+    color: #569cd6; /* Bright blue on hover */
+}
+
+.btn {
+    position: relative;
+    display: block;
+    margin: 20px auto;
+    background-color: #000; /* Black button */
+    color: #fff; /* White text */
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures the animation doesn't overflow */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+/* Purple line animation */
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+    animation: move-around 2s infinite;
+}
+
+@keyframes move-around {
+    0% {
+        border-top-color: purple;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    25% {
+        border-top-color: transparent;
+        border-right-color: purple;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    50% {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: purple;
+        border-left-color: transparent;
+    }
+    75% {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: purple;
+    }
+    100% {
+        border-top-color: purple;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #800080; /* Dark purple */
+    color: white; /* Keeps text white on hover */
+    box-shadow: 0 0 15px #800080, 0 0 30px #800080; /* Glowing effect */
+}
+
+/* Textbox and Select Styling */
+.form-control, .form-select {
+    position: relative;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    border: 2px solid transparent; /* Initially transparent border */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+/* Purple line animation */
+.form-control::before, .form-select::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid transparent; /* Thicker purple line */
+    border-radius: 5px;
+    box-sizing: border-box;
+    animation: move-around 1s linear infinite;
+}
+
+/* Focus Effect */
+.form-control:focus, .form-select:focus {
+    border-color: purple; /* Adds purple border on focus */
+    background-color: #000;
+    color : white;
+}
+
+/* Label Styling */
+.form-label {
+    color: #fff; /* White text for labels */
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Hover Effect for Select and Input */
+.form-control:hover, .form-select:hover {
+    border-color: purple; /* Change border to purple on hover */
+}
